@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arpit Singh Sengar | B.Tech Computer Science &amp; Full-Stack Engineer</title>
+  <meta name="description" content="Portfolio of Arpit Singh Sengar, 2nd-year B.Tech CSE student at GL Bajaj Institute of Technology & Management. Full-stack developer, 230+ LeetCode solver, creator of V.A.U.L.T.">
+  <meta name="keywords" content="Arpit Singh Sengar, Portfolio, Computer Science, GL Bajaj, LeetCode, C++, React, Node.js, V.A.U.L.T, Web Development, Neomorphism">
+  <meta name="author" content="Arpit Singh Sengar">
+  <meta name="color-scheme" content="light">
+  
+  <script>
+    // Force light theme default without FOUC
+    try {
+      localStorage.setItem('neo-theme', 'light');
+    } catch(e) {}
+    document.documentElement.setAttribute('data-theme', 'light');
+  </script>
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Arpit Singh Sengar | B.Tech CSE &amp; Full-Stack Developer">
+  <meta property="og:description" content="Second-year B.Tech Computer Science student seeking software development internships. Real-time multiplayer apps, C++ DSA, and modern web architectures.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="light">
+  <!-- Interactive Toast Notification -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- Audio Context Click Feedback Indicator -->
+  <div class="audio-feedback-pulse" id="audio-pulse" aria-hidden="true"></div>
+
+  <!-- Navigation Bar -->
+  <header class="header-container" id="main-header">
+    <nav class="nav-bar neo-raised" aria-label="Main Navigation">
+      <a href="#hero" class="nav-logo neo-concave" aria-label="Home - Arpit Singh Sengar" id="logo-link">
+        <span class="logo-accent">&lt;</span>AS<span class="logo-accent">/&gt;</span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-links" id="desktop-nav-menu">
+        <li><a href="#hero" class="nav-link active" data-nav="hero">Home</a></li>
+        <li><a href="#about" class="nav-link" data-nav="about">About</a></li>
+        <li><a href="#skills" class="nav-link" data-nav="skills">Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-nav="projects">Projects</a></li>
+        <li><a href="#education" class="nav-link" data-nav="education">Education</a></li>
+        <li><a href="#achievements" class="nav-link" data-nav="achievements">Achievements</a></li>
+        <li><a href="#contact" class="nav-link" data-nav="contact">Contact</a></li>
+      </ul>
+
+      <!-- Controls: Sound & Theme -->
+      <div class="nav-controls">
+        <!-- Tactile Sound Effect Toggle -->
+        <button type="button" class="neo-icon-btn active-pressed" id="sound-toggle-btn" aria-label="Toggle Sound Effects" title="Tactile Sound Feedback (On)">
+          <svg class="icon sound-on-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          </svg>
+          <svg class="icon sound-off-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+            <line x1="1" y1="1" x2="23" y2="23"></line>
+            <path d="M9 9v3a3 3 0 0 0 5.12 2.12M15 9.34V4a3 3 0 0 0-5.94-.6"></path>
+            <path d="M17 16.95A7 7 0 0 1 5 12v-2m14 0v2a7 7 0 0 1-.11 1.23"></path>
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+          </svg>
+        </button>
+
+        <!-- Neomorphic Theme Toggle -->
+        <button type="button" class="neo-icon-btn" id="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Switch to Obsidian Dark Mode">
+          <svg class="icon theme-sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="icon theme-moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="neo-icon-btn mobile-menu-btn" id="mobile-menu-btn" aria-label="Open Navigation Menu" aria-expanded="false">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-drawer neo-raised" id="mobile-drawer" aria-hidden="true">
+      <ul class="mobile-nav-links">
+        <li><a href="#hero" class="mobile-nav-link" data-nav="hero">Home</a></li>
+        <li><a href="#about" class="mobile-nav-link" data-nav="about">About</a></li>
+        <li><a href="#skills" class="mobile-nav-link" data-nav="skills">Skills</a></li>
+        <li><a href="#projects" class="mobile-nav-link" data-nav="projects">Projects</a></li>
+        <li><a href="#education" class="mobile-nav-link" data-nav="education">Education</a></li>
+        <li><a href="#achievements" class="mobile-nav-link" data-nav="achievements">Achievements</a></li>
+        <li><a href="#contact" class="mobile-nav-link" data-nav="contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section section-padding">
+      <div class="container hero-grid">
+        <!-- Hero Text -->
+        <div class="hero-content">
+          <div class="neo-badge hero-status neo-inset">
+            <span class="status-pulse-dot"></span>
+            <span class="status-text">Seeking Software Development Internship (2026 / 2027)</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Arpit Singh Sengar</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Second-year <strong>B.Tech Computer Science student</strong> at GL Bajaj Institute of Technology &amp; Management. Passionate about solving complex algorithmic challenges, building real-time multiplayer systems, and crafting responsive full-stack applications.
+          </p>
+
+          <!-- Contact Quick Info Strip -->
+          <div class="hero-quick-meta">
+            <span class="meta-tag neo-inset">📍 Greater Noida, UP</span>
+            <span class="meta-tag neo-inset">📞 +91 9471559905</span>
+            <span class="meta-tag neo-inset">🎓 B.Tech CSE (2025–2029)</span>
+          </div>
+
+          <!-- Hero Action CTAs -->
+          <div class="hero-actions">
+            <a href="#projects" class="neo-btn neo-btn-primary" id="hero-view-work-btn">
+              <span>View Projects</span>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+
+            <a href="#contact" class="neo-btn neo-btn-secondary" id="hero-contact-btn">
+              <span>Contact Me</span>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </a>
+
+            <a href="mailto:arpi85222707@gmail.com" class="neo-btn neo-btn-icon-labeled" id="download-cv-btn" title="Email Resume Request">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Get Resume</span>
+            </a>
+          </div>
+
+          <!-- Social Proof Badges: GitHub, LinkedIn, LeetCode, Email -->
+          <div class="hero-social-links">
+            <span class="social-label">Connect with me:</span>
+            <div class="social-buttons-row">
+              <a href="https://github.com/Arpit27-creator-tech" target="_blank" rel="noopener noreferrer" class="neo-social-btn" aria-label="GitHub Profile" title="GitHub">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="neo-social-btn" aria-label="LinkedIn Profile" title="LinkedIn">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+              </a>
+              <a href="https://leetcode.com" target="_blank" rel="noopener noreferrer" class="neo-social-btn" aria-label="LeetCode Profile" title="LeetCode (230+ Solved)">
+                <!-- LeetCode Icon -->
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                  <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .271 3.543 5.626 5.626 0 0 0 4.143 3.414 5.86 5.86 0 0 0 2.368-.13 5.753 5.753 0 0 0 2.164-.995l4.89-4.225a1.2 1.2 0 0 0 .393-.895 1.2 1.2 0 0 0-1.206-1.199 1.18 1.18 0 0 0-.792.316l-4.78 4.133a3.46 3.46 0 0 1-1.303.6 3.52 3.52 0 0 1-1.424.078 3.38 3.38 0 0 1-2.488-2.05 3.315 3.315 0 0 1-.162-2.125 3.16 3.16 0 0 1 .726-1.264l3.818-4.088 4.962-5.32A1.375 1.375 0 0 0 13.483 0zm-2.88 8.44a1.2 1.2 0 0 0-1.199 1.2 1.2 1.2 0 0 0 1.199 1.2h8.318a1.2 1.2 0 0 0 1.199-1.2 1.2 1.2 0 0 0-1.199-1.2z"/>
+                </svg>
+              </a>
+              <a href="mailto:arpi85222707@gmail.com" class="neo-social-btn" aria-label="Direct Email" title="Send Email">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Neomorphic Interactive Console / Avatar Card -->
+        <div class="hero-visual">
+          <div class="neo-card hero-tactile-console neo-raised">
+            <!-- Console Header -->
+            <div class="console-top-bar">
+              <div class="console-lights">
+                <span class="light red"></span>
+                <span class="light yellow"></span>
+                <span class="light green"></span>
+              </div>
+              <span class="console-title mono-text">arpit-sengar.dev</span>
+              <div class="console-clock mono-text" id="live-clock">10:20:00</div>
+            </div>
+
+            <!-- Avatar Well -->
+            <div class="avatar-container">
+              <div class="avatar-ring neo-concave">
+                <img src="assets/avatar.jpg" alt="Portrait avatar of Arpit Singh Sengar" class="hero-avatar-img" width="180" height="180" loading="eager">
+              </div>
+              <div class="avatar-badge-pill neo-raised">
+                <span class="avatar-pulse-ring"></span>
+                <span class="badge-tag">B.Tech CSE • GL Bajaj</span>
+              </div>
+            </div>
+
+            <!-- Interactive Tactile Dashboard Widgets -->
+            <div class="console-widgets">
+              <div class="widget-row neo-inset">
+                <span class="widget-label">LEETCODE 50-DAY STREAK</span>
+                <span class="mono-text status-online">🔥 ACTIVE (2026)</span>
+              </div>
+
+              <div class="widget-row neo-inset">
+                <span class="widget-label">COLLEGE CGPA</span>
+                <span class="mono-text text-highlight">7.98 / 10.0</span>
+              </div>
+
+              <div class="widget-stat-grid">
+                <div class="mini-stat neo-raised">
+                  <span class="stat-number">230+</span>
+                  <span class="stat-desc">DSA Problems</span>
+                </div>
+                <div class="mini-stat neo-raised">
+                  <span class="stat-number">Top 45</span>
+                  <span class="stat-desc">SIH Hackathon</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- METRICS STRIP -->
+    <section class="metrics-section section-padding-sm">
+      <div class="container">
+        <div class="metrics-grid">
+          <div class="metric-card neo-raised">
+            <div class="metric-icon neo-concave">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <div class="metric-info">
+              <h3 class="metric-value" data-target="230">230+</h3>
+              <p class="metric-label">LeetCode DSA Solved</p>
+            </div>
+          </div>
+
+          <div class="metric-card neo-raised">
+            <div class="metric-icon neo-concave">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+            </div>
+            <div class="metric-info">
+              <h3 class="metric-value">7.98</h3>
+              <p class="metric-label">B.Tech CGPA (GL Bajaj)</p>
+            </div>
+          </div>
+
+          <div class="metric-card neo-raised">
+            <div class="metric-icon neo-concave">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="8" r="7"></circle>
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+              </svg>
+            </div>
+            <div class="metric-info">
+              <h3 class="metric-value">Top 45</h3>
+              <p class="metric-label">SIH (out of 444 Teams)</p>
+            </div>
+          </div>
+
+          <div class="metric-card neo-raised">
+            <div class="metric-icon neo-concave">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            <div class="metric-info">
+              <h3 class="metric-value" data-target="50">50+</h3>
+              <p class="metric-label">Days Badge 2026</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-section section-padding">
+      <div class="container">
+        <div class="section-heading text-center">
+          <div class="neo-badge neo-inset">ENGINEER PROFILE</div>
+          <h2 class="section-title">Driven by Problem Solving &amp; Engineering Rigor</h2>
+          <p class="section-subtext">Curious, detail-oriented second-year Computer Science undergraduate eager to contribute to high-impact software engineering teams.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left Column: Story Card -->
+          <div class="about-story-card neo-raised">
+            <h3 class="about-card-title">Objective &amp; Background</h3>
+            <p class="about-paragraph">
+              I am a second-year <strong>B.Tech Computer Science student at GL Bajaj Institute of Technology and Management</strong>, Greater Noida (Expected Graduation: 2029). I am actively seeking a software development internship to apply my programming skills, algorithmic thinking, and full-stack development experience on real-world engineering challenges.
+            </p>
+            <p class="about-paragraph">
+              My core foundation is built on deep problem-solving in <strong>C++ and Data Structures &amp; Algorithms</strong> (with 230+ problems solved on LeetCode), combined with modern web development using <strong>React, Node.js, Express, Socket.io, Tailwind CSS, and PostgreSQL</strong>.
+            </p>
+
+            <div class="about-traits-grid">
+              <div class="trait-pill neo-inset">
+                <span class="trait-icon">🧠</span>
+                <span class="trait-text">DSA in C++</span>
+              </div>
+              <div class="trait-pill neo-inset">
+                <span class="trait-icon">⚡</span>
+                <span class="trait-text">Socket.io Real-Time</span>
+              </div>
+              <div class="trait-pill neo-inset">
+                <span class="trait-icon">🌐</span>
+                <span class="trait-text">React &amp; Tailwind</span>
+              </div>
+              <div class="trait-pill neo-inset">
+                <span class="trait-icon">🗄️</span>
+                <span class="trait-text">PostgreSQL &amp; MySQL</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Quick Facts & Philosophy -->
+          <div class="about-details-col">
+            <div class="fact-card neo-raised">
+              <div class="fact-header">
+                <div class="fact-icon-badge neo-concave">📍</div>
+                <h4>Location &amp; Availability</h4>
+              </div>
+              <p>Based in Greater Noida, Uttar Pradesh. Ready for in-office or remote software development internships and project collaborations.</p>
+            </div>
+
+            <div class="fact-card neo-raised">
+              <div class="fact-header">
+                <div class="fact-icon-badge neo-concave">🎓</div>
+                <h4>Academic Performance</h4>
+              </div>
+              <p>GL Bajaj Institute of Technology &amp; Management — Sem 1 SGPA: <strong>7.64</strong>, Sem 2 SGPA: <strong>8.32</strong>, Overall CGPA: <strong>7.98 / 10</strong>.</p>
+            </div>
+
+            <div class="fact-card neo-raised">
+              <div class="fact-header">
+                <div class="fact-icon-badge neo-concave">🏆</div>
+                <h4>Hackathons &amp; Teamwork</h4>
+              </div>
+              <p>Semifinalist at <strong>Build with Bharat 2.0</strong> with Team "The Red". Top 45 of 444 teams at the <strong>Smart India Hackathon</strong> college round.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="skills-section section-padding">
+      <div class="container">
+        <div class="section-heading text-center">
+          <div class="neo-badge neo-inset">TECHNICAL ARSENAL</div>
+          <h2 class="section-title">Skills &amp; Technologies</h2>
+          <p class="section-subtext">Verified competencies across programming languages, web frameworks, databases, and core computer science fundamentals.</p>
+        </div>
+
+        <!-- Category Filter Pills -->
+        <div class="filter-tabs-container neo-raised" role="tablist" aria-label="Skills Category Filter">
+          <button type="button" class="neo-tab-btn active" role="tab" aria-selected="true" data-skill-tab="all">All Skills</button>
+          <button type="button" class="neo-tab-btn" role="tab" aria-selected="false" data-skill-tab="languages">Languages</button>
+          <button type="button" class="neo-tab-btn" role="tab" aria-selected="false" data-skill-tab="web">Web &amp; Frameworks</button>
+          <button type="button" class="neo-tab-btn" role="tab" aria-selected="false" data-skill-tab="core">Core &amp; Databases</button>
+        </div>
+
+        <!-- Skills Grid with Interactive Gauges -->
+        <div class="skills-grid" id="skills-grid">
+          <!-- C++ -->
+          <div class="skill-card neo-raised" data-category="languages">
+            <div class="skill-top">
+              <div class="skill-icon-wrap neo-concave">
+                <span class="skill-emoji">⚙️</span>
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-name">C++ &amp; C</h3>
+                <span class="skill-level-text">Advanced • 92%</span>
+              </div>
+            </div>
+            <div class="neo-progress-well neo-inset" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100">
+              <div class="neo-progress-bar" style="width: 92%;"></div>
+            </div>
+            <p class="skill-summary">Primary language for competitive programming, STL algorithms, memory management, pointers, and problem solving.</p>
+          </div>
+
+          <!-- Data Structures & Algorithms -->
+          <div class="skill-card neo-raised" data-category="core">
+            <div class="skill-top">
+              <div class="skill-icon-wrap neo-concave">
+                <span class="skill-emoji">🌲</span>
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-name">Data Structures &amp; Algorithms</h3>
+                <span class="skill-level-text">230+ Solved • 90%</span>
+              </div>
+            </div>
+            <div class="neo-progress-well neo-inset" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+              <div class="neo-progress-bar" style="width: 90%;"></div>
+            </div>
+            <p class="skill-summary">Arrays, Strings, Linked Lists, Binary Trees, Graphs, Dynamic Programming, Recursion, and Time/Space complexity analysis.</p>
+          </div>
+
+          <!-- JavaScript -->
+          <div class="skill-card neo-raised" data-category="languages">
+            <div class="skill-top">
+              <div class="skill-icon-wrap neo-concave">
+                <span class="skill-emoji">🟨</span>
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-name">JavaScript &amp; Python</h3>
+                <span class="skill-level-text">Proficient • 85%</span>
+              </div>
+            </div>
+            <div class="neo-progress-well neo-inset" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+              <div class="neo-progress-bar" style="width: 85%;"></div>
+            </div>
+            <p class="skill-summary">Modern ES6+ syntax, asynchronous programming, promises, scripting, automation, and full-stack logic.</p>
+          </div>
+
+          <!-- React & Vite -->
+          <div class="skill-card neo-raised" data-category="web">
+            <div class="skill-top">
+              <div class="skill-icon-wrap neo-concave">
+                <span class="skill-emoji">⚛️</span>
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-name">React &amp; Vite</h3>
+                <span class="skill-level-text">Proficient • 88%</span>
+              </div>
+            </div>
+            <div class="neo-progress-well neo-inset" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+              <div class="neo-progress-bar" style="width: 88%;"></div>
+            </div>
+            <p class="skill-summary">Component-driven architecture, custom hooks, state synchronization, client-side routing, and responsive web apps.</p>
+          </div>
+
+          <!-- Node.js, Express & Socket.io -->
+          <div class="skill-card neo-raised" data-category="web">
+            <div class="skill-top">
+              <div class="skill-icon-wrap neo-concave">
+                <span class="skill-emoji">🟢</span>
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-name">Node.js, Express &amp; Socket.io</h3>
+                <span class="skill-level-text">Proficient • 86%</span>
+              </div>
+            </div>
+            <div class="neo-progress-well neo-inset" role="progressbar" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100">
+              <div class="neo-progress-bar" style="width: 86%;"></div>
+            </div>
+            <p class="skill-summary">RESTful API creation, real-time WebSocket communication, multi-client rooms, event emitters, and backend architecture.</p>
+          </div>
+
+          <!-- Tailwind CSS & HTML/CSS -->
+          <div class="skill-card neo-raised" data-category="web">
+            <div class="skill-top">
+              <div class="skill-icon-wrap neo-concave">
+                <span class="skill-emoji">🎨</span>
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-name">HTML, CSS &amp; Tailwind CSS</h3>
+                <span class="skill-level-text">Advanced • 92%</span>
+              </div>
+            </div>
+            <div class="neo-progress-well neo-inset" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100">
+              <div class="neo-progress-bar" style="width: 92%;"></div>
+            </div>
+            <p class="skill-summary">Semantic markup, responsive layouts, utility-first CSS styling, tactile neomorphism, flexbox, and CSS grid.</p>
+          </div>
+
+          <!-- PostgreSQL & MySQL -->
+          <div class="skill-card neo-raised" data-category="core">
+            <div class="skill-top">
+              <div class="skill-icon-wrap neo-concave">
+                <span class="skill-emoji">🐘</span>
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-name">PostgreSQL &amp; MySQL</h3>
+                <span class="skill-level-text">Proficient • 84%</span>
+              </div>
+            </div>
+            <div class="neo-progress-well neo-inset" role="progressbar" aria-valuenow="84" aria-valuemin="0" aria-valuemax="100">
+              <div class="neo-progress-bar" style="width: 84%;"></div>
+            </div>
+            <p class="skill-summary">Relational database design, table schemas, foreign key relationships, complex joins, and SQL query optimization.</p>
+          </div>
+
+          <!-- Git & GitHub -->
+          <div class="skill-card neo-raised" data-category="core">
+            <div class="skill-top">
+              <div class="skill-icon-wrap neo-concave">
+                <span class="skill-emoji">🐙</span>
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-name">Git &amp; GitHub</h3>
+                <span class="skill-level-text">Advanced • 90%</span>
+              </div>
+            </div>
+            <div class="neo-progress-well neo-inset" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+              <div class="neo-progress-bar" style="width: 90%;"></div>
+            </div>
+            <p class="skill-summary">Version control workflows, branch management, pull requests, collaborative development, and deployment pipelines.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SECTION -->
+    <section id="projects" class="projects-section section-padding">
+      <div class="container">
+        <div class="section-heading text-center">
+          <div class="neo-badge neo-inset">ENGINEERED CREATIONS</div>
+          <h2 class="section-title">Projects &amp; Systems</h2>
+          <p class="section-subtext">Real-world applications built with real-time multiplayer networking, algorithmic problem solving, and modern stacks.</p>
+        </div>
+
+        <!-- Project Filter Controls -->
+        <div class="filter-tabs-container neo-raised" role="tablist" aria-label="Projects Filter">
+          <button type="button" class="neo-tab-btn active" role="tab" aria-selected="true" data-project-filter="all">All Projects</button>
+          <button type="button" class="neo-tab-btn" role="tab" aria-selected="false" data-project-filter="web">Full-Stack &amp; Web</button>
+          <button type="button" class="neo-tab-btn" role="tab" aria-selected="false" data-project-filter="algorithms">DSA &amp; Competitive</button>
+          <button type="button" class="neo-tab-btn" role="tab" aria-selected="false" data-project-filter="hackathons">Hackathons</button>
+        </div>
+
+        <!-- Project Cards Grid -->
+        <div class="projects-grid" id="projects-grid">
+          <!-- Project 1: V.A.U.L.T -->
+          <article class="project-card neo-raised" data-category="web" id="project-card-1">
+            <div class="project-media-wrap neo-inset">
+              <img src="assets/vault.jpg" alt="V.A.U.L.T Real-Time Multiplayer Educational Platform" class="project-thumbnail" loading="lazy" width="600" height="340">
+              <div class="project-badge neo-raised">Live Deployment</div>
+            </div>
+            
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag-pill neo-inset">React</span>
+                <span class="tag-pill neo-inset">Vite</span>
+                <span class="tag-pill neo-inset">Socket.io</span>
+                <span class="tag-pill neo-inset">Tailwind CSS</span>
+                <span class="tag-pill neo-inset">PostgreSQL</span>
+                <span class="tag-pill neo-inset">Render</span>
+              </div>
+
+              <h3 class="project-title">V.A.U.L.T (Virtual Academic Underground Learning Team)</h3>
+              <p class="project-description">
+                A real-time multiplayer educational platform where squads of up to 4 solve cross-subject puzzles (CS, math, physics, science, ciphers) in co-op “heist” missions. Designed four role-specific player views with asymmetric clues and a timed alarm system.
+              </p>
+
+              <div class="project-metrics-strip neo-inset">
+                <div class="metric-item">
+                  <span class="metric-num">4-Player</span>
+                  <span class="metric-name">Co-op Squads</span>
+                </div>
+                <div class="metric-item">
+                  <span class="metric-num">Socket.io</span>
+                  <span class="metric-name">Real-Time Sync</span>
+                </div>
+                <div class="metric-item">
+                  <span class="metric-num">Vercel</span>
+                  <span class="metric-name">Live Hosted</span>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://virtualacademic.vercel.app" target="_blank" rel="noopener noreferrer" class="neo-btn neo-btn-sm neo-btn-primary" aria-label="Visit V.A.U.L.T Live Site">
+                  <span>Live App</span>
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+                <button type="button" class="neo-btn neo-btn-sm neo-btn-secondary preview-modal-btn" data-project="1">
+                  <span>Case Study</span>
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: LeetCode & C++ DSA Problem-Solving -->
+          <article class="project-card neo-raised" data-category="algorithms" id="project-card-2">
+            <div class="project-media-wrap neo-inset">
+              <img src="assets/dsa_project.jpg" alt="LeetCode C++ Data Structures and Algorithms Suite" class="project-thumbnail" loading="lazy" width="600" height="340">
+              <div class="project-badge neo-raised">230+ Solved</div>
+            </div>
+            
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag-pill neo-inset">C++</span>
+                <span class="tag-pill neo-inset">Algorithms</span>
+                <span class="tag-pill neo-inset">Data Structures</span>
+                <span class="tag-pill neo-inset">LeetCode</span>
+                <span class="tag-pill neo-inset">50-Day Badge</span>
+              </div>
+
+              <h3 class="project-title">Algorithmic Problem Solving &amp; C++ DSA Repository</h3>
+              <p class="project-description">
+                Over 230+ verified algorithm solutions on LeetCode implemented in C++ covering Binary Search, Graphs, Dynamic Programming, and Two Pointers. Earned the prestigious 50 Days Badge 2026.
+              </p>
+
+              <div class="project-metrics-strip neo-inset">
+                <div class="metric-item">
+                  <span class="metric-num">230+</span>
+                  <span class="metric-name">Problems Solved</span>
+                </div>
+                <div class="metric-item">
+                  <span class="metric-num">50 Days</span>
+                  <span class="metric-name">Streak Badge</span>
+                </div>
+                <div class="metric-item">
+                  <span class="metric-num">C++ STL</span>
+                  <span class="metric-name">Optimized O(N)</span>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://leetcode.com" target="_blank" rel="noopener noreferrer" class="neo-btn neo-btn-sm neo-btn-primary" aria-label="Visit LeetCode Profile">
+                  <span>LeetCode Profile</span>
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+                <button type="button" class="neo-btn neo-btn-sm neo-btn-secondary preview-modal-btn" data-project="2">
+                  <span>Details</span>
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Smart India Hackathon & Build with Bharat -->
+          <article class="project-card neo-raised" data-category="hackathons" id="project-card-3">
+            <div class="project-media-wrap neo-inset">
+              <img src="assets/hackathon_project.jpg" alt="Smart India Hackathon and Build with Bharat Project" class="project-thumbnail" loading="lazy" width="600" height="340">
+              <div class="project-badge neo-raised">Award Finalist</div>
+            </div>
+            
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag-pill neo-inset">Hackathon</span>
+                <span class="tag-pill neo-inset">Team "The Red"</span>
+                <span class="tag-pill neo-inset">Smart Education</span>
+                <span class="tag-pill neo-inset">Full-Stack</span>
+                <span class="tag-pill neo-inset">Top 45</span>
+              </div>
+
+              <h3 class="project-title">Smart Education Innovation (SIH &amp; Build with Bharat 2.0)</h3>
+              <p class="project-description">
+                Interactive student learning analytics platform developed as part of team "The Red". Semifinalist at Build with Bharat 2.0 hackathon, and ranked among top 45 teams out of 444 in the Smart India Hackathon internal round.
+              </p>
+
+              <div class="project-metrics-strip neo-inset">
+                <div class="metric-item">
+                  <span class="metric-num">Top 45</span>
+                  <span class="metric-name">Out of 444</span>
+                </div>
+                <div class="metric-item">
+                  <span class="metric-num">Semifinalist</span>
+                  <span class="metric-name">Build with Bharat</span>
+                </div>
+                <div class="metric-item">
+                  <span class="metric-num">Team</span>
+                  <span class="metric-name">"The Red"</span>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <button type="button" class="neo-btn neo-btn-sm neo-btn-primary preview-modal-btn" data-project="3">
+                  <span>View Details</span>
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                </button>
+                <a href="https://github.com/Arpit27-creator-tech/Smart-Education-Based-System" target="_blank" rel="noopener noreferrer" class="neo-btn neo-btn-sm neo-btn-secondary" aria-label="GitHub Repository">
+                  <span>GitHub</span>
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section id="education" class="experience-section section-padding">
+      <div class="container">
+        <div class="section-heading text-center">
+          <div class="neo-badge neo-inset">ACADEMIC JOURNEY</div>
+          <h2 class="section-title">Education &amp; Qualifications</h2>
+          <p class="section-subtext">Solid academic credentials and consistent high-performance across collegiate and high-school studies.</p>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-track neo-inset"></div>
+
+          <!-- Education 1: B.Tech -->
+          <div class="timeline-item">
+            <div class="timeline-marker neo-raised">
+              <span class="marker-dot"></span>
+            </div>
+            <div class="timeline-card neo-raised">
+              <div class="timeline-card-header">
+                <div>
+                  <h3 class="timeline-role">B.Tech in Computer Science &amp; Engineering</h3>
+                  <span class="timeline-company text-highlight">GL Bajaj Institute of Technology and Management, Greater Noida</span>
+                </div>
+                <span class="timeline-badge neo-inset">2025 — 2029 (Expected)</span>
+              </div>
+              <p class="timeline-description">
+                Currently in second year. Focus areas include Data Structures &amp; Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Modern Full-Stack Web Development.
+              </p>
+              <div class="timeline-skills">
+                <span class="tag-pill neo-inset">SGPA Sem 1: 7.64</span>
+                <span class="tag-pill neo-inset">SGPA Sem 2: 8.32</span>
+                <span class="tag-pill neo-inset">CGPA: 7.98 / 10.0</span>
+                <span class="tag-pill neo-inset">Data Structures</span>
+                <span class="tag-pill neo-inset">C++</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education 2: Class XII -->
+          <div class="timeline-item">
+            <div class="timeline-marker neo-raised">
+              <span class="marker-dot"></span>
+            </div>
+            <div class="timeline-card neo-raised">
+              <div class="timeline-card-header">
+                <div>
+                  <h3 class="timeline-role">Senior Secondary (Class XII) — CBSE</h3>
+                  <span class="timeline-company text-highlight">Army Public School, Kanpur Cantt</span>
+                </div>
+                <span class="timeline-badge neo-inset">Completed 2024</span>
+              </div>
+              <p class="timeline-description">
+                Completed Class XII senior secondary curriculum under CBSE board with an aggregate of <strong>83%</strong>, specializing in Science (Physics, Chemistry, Mathematics, and Computer Science).
+              </p>
+              <div class="timeline-skills">
+                <span class="tag-pill neo-inset">Score: 83.0%</span>
+                <span class="tag-pill neo-inset">CBSE Board</span>
+                <span class="tag-pill neo-inset">Mathematics</span>
+                <span class="tag-pill neo-inset">Computer Science</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education 3: Class X -->
+          <div class="timeline-item">
+            <div class="timeline-marker neo-raised">
+              <span class="marker-dot"></span>
+            </div>
+            <div class="timeline-card neo-raised">
+              <div class="timeline-card-header">
+                <div>
+                  <h3 class="timeline-role">Secondary School Examination (Class X) — CBSE</h3>
+                  <span class="timeline-company text-highlight">Army Public School, Ranchi</span>
+                </div>
+                <span class="timeline-badge neo-inset">Completed 2022</span>
+              </div>
+              <p class="timeline-description">
+                Completed secondary school education under CBSE board with an aggregate of <strong>83.4%</strong>.
+              </p>
+              <div class="timeline-skills">
+                <span class="tag-pill neo-inset">Score: 83.4%</span>
+                <span class="tag-pill neo-inset">CBSE Board</span>
+                <span class="tag-pill neo-inset">Distinction</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS SECTION -->
+    <section id="achievements" class="testimonials-section section-padding-sm">
+      <div class="container">
+        <div class="section-heading text-center">
+          <div class="neo-badge neo-inset">HONORS &amp; RECOGNITION</div>
+          <h2 class="section-title">Achievements &amp; Milestones</h2>
+          <p class="section-subtext">Competitive hackathon rankings and algorithm mastery badges earned through dedication.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Achievement 1 -->
+          <div class="testimonial-card neo-raised">
+            <div class="stars-row neo-inset">
+              🏆 HACKATHON RECOGNITION
+            </div>
+            <p class="testimonial-quote">
+              "Semifinalist at <strong>Build with Bharat 2.0</strong> hackathon as part of team <strong>'The Red'</strong>, competing against university and engineering teams across the country."
+            </p>
+            <div class="client-meta">
+              <div class="client-avatar neo-concave">TR</div>
+              <div class="client-info">
+                <strong>Team "The Red"</strong>
+                <span>Build with Bharat 2.0 Semifinalist</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Achievement 2 -->
+          <div class="testimonial-card neo-raised">
+            <div class="stars-row neo-inset">
+              🇮🇳 SMART INDIA HACKATHON
+            </div>
+            <p class="testimonial-quote">
+              "Cleared the rigorous internal college round of <strong>Smart India Hackathon (Smart Education theme)</strong>, achieving a rank among the <strong>top 45 teams out of 444</strong> competing teams."
+            </p>
+            <div class="client-meta">
+              <div class="client-avatar neo-concave">SIH</div>
+              <div class="client-info">
+                <strong>Top 45 / 444 Teams</strong>
+                <span>Smart India Hackathon (College Round)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Achievement 3 -->
+          <div class="testimonial-card neo-raised" style="grid-column: 1 / -1; max-width: 800px; margin: 0 auto;">
+            <div class="stars-row neo-inset">
+              ⚡ LEETCODE MILESTONE
+            </div>
+            <p class="testimonial-quote">
+              "Solved <strong>230+ Data Structures &amp; Algorithms problems on LeetCode</strong> in C++ and earned the official <strong>50 Days Badge 2026</strong> for continuous problem-solving consistency."
+            </p>
+            <div class="client-meta">
+              <div class="client-avatar neo-concave">LC</div>
+              <div class="client-info">
+                <strong>230+ Solved • 50 Days Badge 2026</strong>
+                <span>LeetCode Competitive Programming</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section section-padding">
+      <div class="container">
+        <div class="section-heading text-center">
+          <div class="neo-badge neo-inset">GET IN TOUCH</div>
+          <h2 class="section-title">Let's Connect &amp; Collaborate</h2>
+          <p class="section-subtext">Interested in discussing software internship opportunities, tech stacks, or hackathon projects? Reach out below!</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left Column: Direct Contact Info & Quick Actions -->
+          <div class="contact-info-col">
+            <div class="contact-detail-card neo-raised">
+              <div class="detail-icon neo-concave">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="detail-text">
+                <span class="detail-label">Email Address</span>
+                <strong class="detail-val">arpi85222707@gmail.com</strong>
+              </div>
+              <button type="button" class="neo-btn neo-btn-sm neo-btn-secondary" id="copy-email-btn" title="Copy Email to Clipboard">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span id="copy-btn-label">Copy</span>
+              </button>
+            </div>
+
+            <div class="contact-detail-card neo-raised">
+              <div class="detail-icon neo-concave">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <div class="detail-text">
+                <span class="detail-label">Phone Number</span>
+                <strong class="detail-val">+91 9471559905</strong>
+              </div>
+            </div>
+
+            <div class="contact-detail-card neo-raised">
+              <div class="detail-icon neo-concave">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="detail-text">
+                <span class="detail-label">Location</span>
+                <strong class="detail-val">Greater Noida, Uttar Pradesh, India</strong>
+              </div>
+            </div>
+
+            <!-- Neomorphic Live Availability Card -->
+            <div class="availability-card neo-raised">
+              <div class="availability-header">
+                <span class="pulse-dot-large"></span>
+                <strong>Internship Status: Actively Available</strong>
+              </div>
+              <p class="availability-body">
+                Open for Software Development Internships (Summer / Fall 2026 / 2027), full-stack project building, and technical discussions.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Tactile Form -->
+          <div class="contact-form-col">
+            <form class="contact-form neo-raised" id="contact-form" novalidate>
+              <h3 class="form-title">Send a Direct Message</h3>
+
+              <div class="form-group">
+                <label for="form-name" class="form-label">Your Name</label>
+                <div class="input-wrap neo-inset">
+                  <input type="text" id="form-name" name="name" class="neo-input" placeholder="e.g. Recruiter / Collaborator Name" required autocomplete="name">
+                </div>
+                <span class="field-error" id="name-error"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="form-email" class="form-label">Your Email</label>
+                <div class="input-wrap neo-inset">
+                  <input type="email" id="form-email" name="email" class="neo-input" placeholder="e.g. team@company.com" required autocomplete="email">
+                </div>
+                <span class="field-error" id="email-error"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="form-project-type" class="form-label">Opportunity Type</label>
+                <div class="input-wrap neo-inset select-wrap">
+                  <select id="form-project-type" name="projectType" class="neo-input neo-select">
+                    <option value="internship">Software Development Internship</option>
+                    <option value="fullstack">Full-Stack Project Collaboration</option>
+                    <option value="hackathon">Hackathon Team Building</option>
+                    <option value="mentorship">Technical Discussion / Connect</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="form-message" class="form-label">Message</label>
+                <div class="input-wrap neo-inset textarea-wrap">
+                  <textarea id="form-message" name="message" class="neo-input neo-textarea" rows="5" placeholder="Write your message here..." required></textarea>
+                </div>
+                <span class="field-error" id="message-error"></span>
+              </div>
+
+              <button type="submit" class="neo-btn neo-btn-primary neo-btn-full" id="form-submit-btn">
+                <span id="submit-btn-text">Send Message</span>
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer-container">
+    <div class="container footer-content neo-raised">
+      <div class="footer-brand">
+        <a href="#hero" class="nav-logo neo-concave">
+          <span class="logo-accent">&lt;</span>AS<span class="logo-accent">/&gt;</span>
+        </a>
+        <p class="footer-tagline">Arpit Singh Sengar — Crafting high-performance software with algorithmic precision.</p>
+      </div>
+
+      <div class="footer-nav">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright-text">
+          &copy; <span id="current-year">2026</span> Arpit Singh Sengar. Built with pure HTML, Vanilla CSS &amp; JavaScript.
+        </p>
+        <button type="button" class="neo-icon-btn back-to-top-btn" id="back-to-top-btn" aria-label="Back to Top" title="Back to top">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PROJECT PREVIEW MODAL -->
+  <div class="neo-modal-backdrop" id="project-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="neo-modal-content neo-raised" id="modal-container">
+      <div class="modal-top">
+        <span class="modal-category neo-badge neo-inset" id="modal-project-badge">Category</span>
+        <button type="button" class="neo-icon-btn modal-close-btn" id="modal-close-btn" aria-label="Close Project Modal">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-media-well neo-inset">
+        <img src="" alt="" id="modal-project-img" class="modal-preview-img" width="700" height="390">
+      </div>
+
+      <div class="modal-body">
+        <h3 class="modal-title" id="modal-project-title">Project Title</h3>
+        <p class="modal-desc" id="modal-project-desc">Detailed breakdown of the project architecture, design choices, and engineering performance results.</p>
+        
+        <div class="modal-tech-stack">
+          <h4>Technologies Used:</h4>
+          <div class="modal-tags" id="modal-project-tags"></div>
+        </div>
+
+        <div class="modal-metrics-block neo-inset" id="modal-project-metrics"></div>
+
+        <div class="modal-actions">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="neo-btn neo-btn-primary" id="modal-demo-link">
+            <span>Launch Live Preview</span>
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </a>
+          <button type="button" class="neo-btn neo-btn-secondary" id="modal-dismiss-btn">
+            <span>Close Modal</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Bundle -->
+  <script src="script.js"></script>
+</body>
+</html>
